@@ -19,7 +19,7 @@ for i in range(7):
     gt = cv2.imread("label\\normal_"+ '%03d' %(100+8*i) +".png")/255.
 
     cur_cos = ang_acc(normal_rgb, gt)
-
+    # print(cur_cos)
     total+=np.mean(np.abs(normal_rgb-gt))
     total_ang_acc+=cur_cos
 print(total/7)
